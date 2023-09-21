@@ -90,12 +90,28 @@ const user=[
 ]
 
 
-console.log(user);
-console.log(user[0].email);
+// console.log(user);
+// console.log(user[0].email);
 
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
 
-console.log(tinderUser.hasOwnProperty('isLogedIn')); //to check whether objects properties available or not 
+// console.log(tinderUser.hasOwnProperty('isLogedIn')); //to check whether objects properties available or not 
+
+// +++++++++++ de-structring objects +++++++++++++++++++++++
+
+const course ={
+    courseName:"JS in hindi",
+    prise:999,
+    courseInstructor:"hitesh"
+}
+
+// console.log(course.courseInstructor); //this is good but every one use 
+//another way
+
+const {courseInstructor:Instructor,courseName}= course
+// console.log(courseInstructor);
+console.log(Instructor);
+console.log(courseName);

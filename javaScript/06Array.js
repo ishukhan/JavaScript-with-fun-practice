@@ -49,7 +49,7 @@ const dc_heros =["superman", "flash", "batman"]
 // console.log(marval_heros[3]);
 // console.log(marval_heros[3][2]);
 
-
+//concat methode
 let allHeros = marval_heros.concat(dc_heros)
 console.log(allHeros);
 

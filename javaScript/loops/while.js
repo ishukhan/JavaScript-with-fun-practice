@@ -41,3 +41,14 @@ while(arr<myArry.length){
 // }
 
 
+// do {
+    
+// } while (condition);
+
+let i=1;
+
+do {
+    console.log(`value of i is ${i}`)
+    i++;
+} while (i<=10);
+

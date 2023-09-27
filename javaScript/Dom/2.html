@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Satarday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+<script>
+    const mydiv = document.querySelector('.parent')
+    // console.log(mydiv);
+    // console.log(mydiv.children);
+    // console.log(mydiv.children);
+    
+    // 1st methode 
+
+    for (let i = 0; i < mydiv.children.length; i++) {
+        console.log(mydiv.children[i].innerHTML);
+        
+    }
+
+
+    // 2nd methode 
+    // const myConvert = Array.from(mydiv.children)
+    // console.log(myConvert);
+
+    // myConvert.forEach( (item)=>{
+    //     console.log(item.innerText);
+    // })
+
+
+</script>
+</html>

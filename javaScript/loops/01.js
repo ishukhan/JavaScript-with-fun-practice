@@ -33,5 +33,25 @@ let myArry =["superman", "batman", "flash"]
 
 for (let index = 0; index < myArry.length; index++) {
     const element = myArry[index];
-    console.log(`value of ${element}`)
+    // console.log(`value of ${element}`)
+}
+
+// break;
+
+for (let i = 0; i <=10; i++) {
+    if(i==5){
+        console.log("Detacted 5");
+        break;
+    } 
+    console.log(`value of i is ${i}`)
+}
+
+// continue;
+
+for (let i = 0; i <=10; i++) {
+    if(i==5){
+        console.log("Detacted 5");
+        continue;
+    } 
+    console.log(`value of i is ${i}`)
 }

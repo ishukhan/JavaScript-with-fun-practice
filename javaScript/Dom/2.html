@@ -24,20 +24,33 @@
     
     // 1st methode 
 
-    for (let i = 0; i < mydiv.children.length; i++) {
-        console.log(mydiv.children[i].innerHTML);
+    // for (let i = 0; i < mydiv.children.length; i++) {
+    //     console.log(mydiv.children[i].innerHTML);
         
-    }
+    // }
 
+    mydiv.children[1].style.color = "orange"
+    // console.log(mydiv.firstElementChild);
+    // console.log(mydiv.lastElementChild);
 
+    
+    
+    
+    
     // 2nd methode 
     // const myConvert = Array.from(mydiv.children)
     // console.log(myConvert);
-
+    
     // myConvert.forEach( (item)=>{
-    //     console.log(item.innerText);
-    // })
-
-
-</script>
+        //     console.log(item.innerText);
+        // })
+        
+        
+        //child to parent access
+        const dayOne = document.querySelector(".day")
+        // console.log(dayOne.parentElement)
+        // console.log(dayOne.nextElementSibling);
+        
+        console.log("NODE: ", mydiv.childNodes);
+    </script>
 </html>

@@ -46,3 +46,41 @@ buttons.forEach(function (button) {
 
 
 ```
+
+## Project 2
+
+# BMI CALCULATOR
+
+```
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const height = parseInt(document.querySelector('#height').value);
+  const weight = parseInt(document.querySelector('#weight').value);
+  const result = document.querySelector('#result');
+
+  if (height === '' || height < 0 || isNaN(height)) {
+    result.innerHTML = `Please give a Valid height ${height}`;
+    result.style.color = 'red';
+  } else if (weight === '' || weight < 0 || isNaN(weight)) {
+    result.innerHTML = `Please give a Valid weight ${weight}`;
+    result.style.color = 'red';
+  } else {
+    const bmi = (weight / ((height * height) / 10000)).toFixed(2);
+    // show the result
+    if (bmi <= 18.6) {
+      result.innerHTML = `<span>${bmi}</span><br><span>Your are Under Weight</span>`;
+      result.style.color = 'yellow';
+    } else if (bmi >= 18.6 && bmi <= 24.9) {
+      result.innerHTML = `<span>${bmi}</span><br><span>Noraml Range</span>`;
+      result.style.color = 'darkgreen';
+    } else {
+      result.innerHTML = `<span>${bmi}</span><br><span>Over Weight Keep Excersize</span>`;
+      result.style.color = 'red';
+    }
+  }
+});
+
+```

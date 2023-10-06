@@ -4,12 +4,11 @@
 
 [click here](https://stackblitz.com/edit/web-platform-bjyguo?file=index.html)
 
-## project 1
+## project 1 Solution
 
 # Color Changer
 
-```
-javaScript Code
+```javaScript
 console.log("ishu")
 
 const buttons = document.querySelectorAll('.button');
@@ -47,11 +46,11 @@ buttons.forEach(function (button) {
 
 ```
 
-## Project 2
+## Project 2 Solution
 
 # BMI CALCULATOR
 
-```
+```javaScript
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function (e) {

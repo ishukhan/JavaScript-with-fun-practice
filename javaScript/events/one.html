@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html Events</title>
+  </head>
+
+  <body style="background: #414141; color: aliceblue">
+    <h2>Amazing Photo</h2>
+    <div>
+      <ul id="image">
+        <li>
+          <img
+            width="100px"
+            height="100px"
+            id="photoshop"
+            src="https://images.pexels.com/photos/16369764/pexels-photo-16369764/free-photo-of-blackberries.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt="photoshop"
+          />
+        </li>
+        <li>
+          <img
+            width="100px"
+            height="100px"
+            id="building"
+            src="https://images.pexels.com/photos/17650739/pexels-photo-17650739/free-photo-of-classical-building-facade-with-decorative-elements.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="100px"
+            height="100px"
+            id="bike"
+            src="https://images.pexels.com/photos/15743235/pexels-photo-15743235/free-photo-of-city-road-traffic-people.png?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            width="100px"
+            height="100px"
+            id="tower"
+            src="https://images.pexels.com/photos/13088058/pexels-photo-13088058.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="http://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 1 approch
+    // document.getElementById("tower").onclick = function () {
+    //   alert("tower click");
+    // };
+
+    // attchEvent
+    // jQuery - on
+    //                       *notes8
+    // important study in event object
+    //type, timeStamp, defaultPreventd, target, toElement, srcElement,curentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlKey, shiftKey, keyCode
+
+    // 2nd approch
+    // document.getElementById("tower").addEventListener("click", function () {
+    //   alert("tower click again");
+    // });
+
+    // document.getElementById("bike").addEventListener("click", function (e) {
+    //   console.log(e);
+    //   //   console.log(e.clientX);
+    //   //   console.log(e.view.innerWidth);
+    //   //   console.log(e.view.innerHeight);
+    // });
+
+    // Event propagation
+    // two type of event propagation bubbling and capturing
+    // also event propagation is false or default.
+
+    // bubling travels from the target to the root
+    // document.getElementById("tower").addEventListener("click", function (e) {
+    //   console.log("tower click");
+    //   // e.stopPropagation(); // doent bubble and go to upper
+    // });
+    // // and capturing travels from root to the target
+    // document.getElementById("image").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("click inside the ul");
+    //   },
+    //   true
+    // );
+
+    // document.getElementById("google").addEventListener("click", function (e) {
+    //   e.preventDefault();
+    //   //   e.stopPropagation(); //stop propagation
+    //   console.log("google clicked");
+    // });
+
+    document.querySelector("#image").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e.target.parentNode);
+        // let removeIt = e.target.parentNode;
+
+        // console.log(e.target.tagName);
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let removeIt = e.target.parentNode;
+          removeIt.remove();
+        }
+      },
+      false
+    );
+    // removeIt.parentNode.removeChild(removeIt);
+  </script>
+</html>

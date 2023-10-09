@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function () {
+      console.log("ishu", Date.now());
+    };
+
+    // const clear = setInterval(sayDate, 1000, "hello"); //Three parameter
+
+    // clearInterval(clear);
+
+    // first declare a undifiend variable
+    let interval;
+
+    document.querySelector("#start").addEventListener("click", function () {
+      //   console.log("click start");
+
+      //   than set undifiend variable assigne a setInterval
+      interval = setInterval(sayDate, 1000);
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("Stop click");
+      clearInterval(interval);
+    });
+    document;
+  </script>
+</html>

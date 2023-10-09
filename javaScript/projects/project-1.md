@@ -201,3 +201,66 @@ function newGame() {
 }
 
 ```
+
+## Project 5 Solution
+
+# Keyboard Cheack
+
+```javaScript
+const insert = document.querySelector('#insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keyCode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? ' SPACE' : `${e.key}`}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+
+</table>
+  `;
+});
+
+```
+
+## Project 6 Solution
+
+# Unlimited Color
+
+```javaScript
+// Randome Color Genarate
+
+const randomeColor = function () {
+  const hex = "123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+// console.log(randomeColor());
+let interval;
+const changeBg = function () {
+  document.body.style.backgroundColor = randomeColor();
+};
+const startChangingColor = function () {
+  interval = setInterval(changeBg, 1000);
+};
+
+const stopChangingColor = function () {
+  clearInterval(interval);
+  interval = null;
+};
+
+document.querySelector("#start").addEventListener("click", startChangingColor);
+
+document.querySelector("#stop").addEventListener("click", stopChangingColor);
+
+
+```

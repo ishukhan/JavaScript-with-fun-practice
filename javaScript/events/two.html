@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+    <button id="play">play</button>
+  </body>
+  <script>
+    // setTimeout(function () {
+    //   console.log("Ishukhan");
+    // }, 2000);
+
+    const sayIshu = function () {
+      console.log("Ishukhan");
+    };
+
+    setTimeout(sayIshu, 2000); //function refrence
+
+    //    change h1 tag after 2 second
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Ishu khan aur code";
+    };
+    // setTimeout(changeText, 3000);
+
+    // how to avoide setTimeout
+    // using clearTimeout
+    // Example
+    // Hold this setTimeout in variable
+
+    // when some one came to your website and you show something in a specific time than use this
+    const changeMe = setTimeout(changeText, 3000);
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe);
+      console.log("stop");
+    });
+
+    // when someOne do the specific task and than show something using this
+    document.querySelector("#play").addEventListener("click", function () {
+      //   console.log("play");
+      const changeText = function () {
+        document.querySelector("h1").innerHTML = "when click they change";
+      };
+      setTimeout(changeText, 3000);
+    });
+  </script>
+</html>

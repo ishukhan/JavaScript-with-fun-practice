@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Api</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/66aa7c98b3.js"
+      crossorigin="anonymous"
+    ></script>
+   
+    </style>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="card">
+      <div class="img-bx">
+        <img src="" alt="img" />
+      </div>
+      <div class="content">
+        <div class="detail">
+          <h2><label>Name</label><br /><span><label>Bio</label></span></h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+        <button id="user">Get user</button>    </div>
+  </body>
+  <script>
+    const requestUrl = "https://api.github.com/users/ishukhan";
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", requestUrl);
+    xhr.onreadystatechange = function () {
+      //   console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        // hold this context in variable and convrt into JSON
+        // console.log(this.responseText);
+        const data = JSON.parse(this.responseText);
+        // console.log(typeof data);
+        // console.log(data.followers);
+        // console.log(data.name);
+        const card =document.querySelector(".card")
+        document.querySelector("#user").addEventListener('click',function(e){
+          card.innerHTML = `
+            <div class="img-bx">
+        <img src="${data.avatar_url}" alt="img" />
+      </div>
+       <div class="content">
+        <div class="detail">
+          <h2>${data.name}<br /><span>${data.bio}</span></h2>
+          <ul class="sci">
+            <li>
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+          `
+        })
+      }
+    };
+    xhr.send();
+  </script>
+</html>

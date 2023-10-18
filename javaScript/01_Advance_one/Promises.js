@@ -1,43 +1,43 @@
 // promise create
 
-// const promiseOne = new Promise(function (resolve, reject) {
-//   // Do an Async task
-//   // DB call, cryptography, network
-//   setTimeout(function () {
-//     // console.log("Async task is complete");
-//     resolve();
-//   }, 1000);
-// });
+const promiseOne = new Promise(function (resolve, reject) {
+  // Do an Async task
+  // DB call, cryptography, network
+  setTimeout(function () {
+    console.log("Async task is complete");
+    resolve();
+  }, 1000);
+});
 
-// promiseOne.then(function () {
-//   // console.log("Promise is resolved");
-// });
+promiseOne.then(function () {
+  console.log("Promise is resolved");
+});
 
 // without hold in variable
 
-// new Promise((resolve, reject) => {
-//   setTimeout(() => {
-//     // console.log("Async task 2");
-//     resolve();
-//   }, 2000);
-// }).then(() => {
-//   //   console.log("Async 2 resolved");
-// });
+new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Async task 2");
+    resolve();
+  }, 2000);
+}).then(() => {
+    console.log("Async 2 resolved");
+});
 
 //Data consumption and value pass using promises.
 //Basic Exmaple
 
-// const promiseThree = new Promise(function (resolve, reject) {
-//   setTimeout(function () {
-//     resolve({ userName: "chai", email: "chai@example.com" });
-//   }, 1000);
-// });
+const promiseThree = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve({ userName: "chai", email: "chai@example.com" });
+  }, 1000);
+});
 
-// // pass parameter in function
-// promiseThree.then(function (user) {
-//   // log the parameter
-//   console.log(user);
-// });
+// pass parameter in function
+promiseThree.then(function (user) {
+  // log the parameter
+  console.log(user);
+});
 
 // promis four basic resolve and reject
 
@@ -102,8 +102,7 @@ consumePromisFive();
 
 // getallUser();
 
-let url = fetch("https://api.github.com/users/ishukhan");
-url
+fetch("https://api.github.com/users/ishukhan")
   .then((response) => {
     return response.json();
   })

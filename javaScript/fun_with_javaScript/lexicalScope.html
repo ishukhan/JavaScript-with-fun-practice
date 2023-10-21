@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LexicalScope aur chai</title>
+  </head>
+  <body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+  </body>
+  <script>
+    // function Outer() {
+    //   let username = "ishu";
+    //   function Inner() {
+    //     console.log("Inner :", username);
+    //   }
+    //   Inner();
+    //   console.log("Outer : ", username);
+    // }
+    // Outer();
+  </script>
+
+  <script>
+    // if you have 500 hundrend button we cant repeat these line of code
+
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = "orange";
+    // };
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "green";
+    // };
+
+    function clickHandle(color) {
+      //   document.body.style.backgroundColor = `${color}`;
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+    document.getElementById("orange").onclick = clickHandle("orange");
+    document.getElementById("green").onclick = clickHandle("green");
+  </script>
+</html>

@@ -63,5 +63,5 @@ span {
   transition: ease-out 0.1s;
 }
 .btn:hover {
-  background: purple;
+  background: rgb(240, 59, 240);
 }

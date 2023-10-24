@@ -25,3 +25,21 @@
 - currentTarget property
 - classList
 - textContent
+
+## Review
+
+\*\* Key concepts covered:
+
+- objects
+- DOMContentLoaded
+- addEventListener()
+- array.length
+- textContent
+
+## Navbar
+
+\*\* Key concepts covered:
+
+- document.querySelector()
+- addEventListener()
+- classList.toggle()

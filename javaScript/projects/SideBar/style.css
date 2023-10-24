@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  /* font-family: "Exo 2", sans-serif; */
+}
+
+.sideBar-toggle {
+  margin: 10px 20px;
+  background: none;
+  border: none;
+  padding: 10px;
+  color: rgb(23, 156, 156);
+  float: right;
+  cursor: pointer;
+}
+.sideBar-toggle i {
+  transition: all 0.3s ease-in-out;
+  font-size: 35px;
+}
+
+.sideBar-toggle i:hover {
+  transform: scale(1.2);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(230, 230, 154);
+  width: 100%;
+  /* padding: 20px; */
+  font-family: "Exo 2", sans-serif;
+  font-weight: 800;
+  height: 100vh;
+  transition: all 0.3s;
+  transform: translate(-100%);
+}
+/* media query for bigger screen */
+@media screen and (min-width: 670px) {
+  .sidebar {
+    width: 400px;
+  }
+}
+.show-sidebar {
+  transform: translate(0);
+}
+span {
+  color: rgb(23, 156, 156);
+}
+
+.sidebar-header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  padding: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.close-btn i {
+  font-size: 25px;
+  color: rgb(184, 6, 6);
+  transition: all 0.8s ease-in-out;
+}
+.close-btn i:hover {
+  transform: rotate(360deg);
+}
+
+/* links */
+.links {
+  /* padding: 10px; */
+  list-style: none;
+  height: 75vh;
+}
+.links li {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.links li:hover {
+  background-color: antiquewhite;
+}
+
+/* social links */
+
+.social-links {
+  /* position: absolute;
+  bottom: 7%;
+  left: 10%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.social-links {
+  font-size: 25px;
+}
+.social-links i:hover {
+  color: blue;
+}

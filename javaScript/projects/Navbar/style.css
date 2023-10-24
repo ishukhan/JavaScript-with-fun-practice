@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@800&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo 2", sans-serif;
+  /* background: rgb(219, 217, 217); */
+}
+
+.nav-center {
+  background: whitesmoke;
+  /* background: red; */
+  padding: 10px;
+  box-shadow: 0px 1px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+h2 {
+  padding: 5px 5px;
+  background: none;
+  font-weight: 800;
+  text-decoration: underline;
+}
+span {
+  color: rgb(19, 180, 180);
+  background: none;
+}
+
+.nav-toggle {
+  margin-right: 10px;
+  padding: 0px 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.nav-toggle i {
+  font-size: 25px;
+}
+
+/* links */
+
+.links {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.links li {
+  font-size: 15px;
+  list-style: none;
+  cursor: pointer;
+}
+
+/* social link */
+
+.social-link {
+  margin-right: 10px;
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+.social-link li {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .links {
+    display: none;
+    overflow: hidden;
+    transition: 2s;
+  }
+  .show-links {
+    position: absolute;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background-color: aquamarine;
+  }
+  .show-links li:hover {
+    background-color: antiquewhite;
+  }
+  .show-links li {
+    padding: 10px;
+  }
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    background: whitesmoke;
+  }
+  .social-link {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}

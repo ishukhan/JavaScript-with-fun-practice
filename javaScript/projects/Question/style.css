@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright&family=IBM+Plex+Sans:ital@1&family=Molle&display=swap");
+/* font-family: 'Cormorant Upright', serif;
+font-family: 'IBM Plex Sans', sans-serif;
+font-family: 'Molle', cursive; */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.question {
+  background-color: rgb(249, 237, 224);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.title {
+  margin-top: 50px;
+  font-size: 20px;
+  font-family: "Cormorant Upright", serif;
+  color: rgb(246, 182, 22);
+}
+
+/* question cneter */
+
+.question-center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#question {
+  background: white;
+  width: 50vw;
+  padding: 15px 15px;
+  /* border-radius: 10px; */
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.question-title p {
+  letter-spacing: 3px;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-weight: 900;
+}
+
+button {
+  background: none;
+  border: none;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+}
+
+.plush-icon {
+  font-size: 20px;
+  color: orange;
+}
+
+button:hover {
+  transform: rotate(90deg);
+}
+.minus-icon {
+  font-size: 20px;
+  color: orange;
+  display: none;
+}
+
+.question-text {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.hide-text {
+  display: block;
+}
+
+.question-text p {
+  margin-top: 8px;
+}
+
+/* click function and add this classList  */
+
+.question-text {
+  display: none;
+}
+
+.show-text .question-text {
+  display: block;
+}
+.minus-icon {
+  display: none;
+}
+.show-text .minus-icon {
+  display: block;
+}
+
+.show-text .plush-icon {
+  display: none;
+}

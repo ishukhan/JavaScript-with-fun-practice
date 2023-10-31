@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 30px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title h2 {
+  font-size: 2rem;
+  cursor: default;
+}
+
+.underline {
+  width: 100%;
+  height: 2px;
+  background: #f8ad76;
+}
+
+/* Buttons */
+.filter_btn {
+  font-size: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid #f8ad76;
+  font-family: cursive;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.filter_btn:hover {
+  background: #f8ad76;
+}
+/* menu items*/
+
+.section_center {
+  display: grid;
+  gap: 1rem 1rem;
+  grid-template-columns: auto auto;
+  max-width: 880px;
+  margin: 0 35px;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu_item .photo {
+  width: 60%;
+  height: 50%;
+  border: 2px solid #ff7b1a;
+  border-radius: 10px;
+}
+
+.item_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item_info header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+.item_info header h4 {
+  text-transform: capitalize;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.item_info header .price {
+  color: #ff7b1a;
+}
+
+.item_info .item_text {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* media query */
+
+@media screen and (max-width: 850px) {
+  .section_center {
+    grid-template-columns: auto;
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .menu_item {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu_item .photo {
+    width: 100%;
+  }
+}

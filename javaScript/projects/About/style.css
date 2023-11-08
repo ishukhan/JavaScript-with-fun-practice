@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e4e4e2;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  /* height: 100vh; */
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding-top: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about_center {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 25px;
+  justify-content: center;
+  width: 37%;
+  /* align-items: center; */
+}
+.about {
+  background: white;
+}
+.about_img img {
+  border-radius: 8px;
+  width: 365px;
+}
+
+.btn_container {
+  background: rgba(151, 151, 151, 0.272);
+  display: flex;
+  justify-content: center;
+  /* border-radius: 5px; */
+}
+.tab_btn {
+  cursor: pointer;
+  padding: 10px 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  font-weight: 800;
+  /* border-radius: 10px; */
+  background: none;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+.tab_btn.active {
+  background: rgba(255, 255, 255, 0.796);
+  /* border-radius: 5px; */
+}
+.tab_btn:hover {
+  background-color: rgba(255, 255, 255, 0.796);
+  /* border-radius: 5px; */
+}
+
+.content {
+  display: none;
+}
+.content.active {
+  display: block;
+}
+.content h4 {
+  /* font-weight: 800; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+  padding: 8px 10px;
+}
+.content p {
+  font-weight: 300;
+  font-family: "Times New Roman", Times, serif;
+  padding: 8px 10px;
+}
+
+@media screen and (max-width: 750px) {
+  .about_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

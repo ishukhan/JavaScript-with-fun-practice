@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* background: #212121; */
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#home {
+  position: relative;
+}
+
+/* NAVBAR */
+#nav {
+  /* background: rgba(73, 166, 233, 0.5); */
+  z-index: 100;
+}
+.fixed {
+  position: fixed;
+  background: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav_center {
+  padding: 15px 30px;
+  /* box-shadow: inset 1px 0px 4px 0px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav_header h3 {
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h3 span {
+  color: rgb(136, 5, 5);
+  font-weight: 900;
+}
+
+/* toggle */
+.nav_toggle {
+  cursor: pointer;
+  font-size: 25px;
+  background: none;
+  border: none;
+  display: none;
+}
+
+.nav_link {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin-right: 30px;
+}
+.nav_link li a {
+  color: black;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  #nav {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.379);
+    z-index: 100;
+  }
+  .nav_center {
+    box-shadow: inset 1px 0px 4px 0px;
+  }
+  .nav_toggle {
+    display: block;
+  }
+  .nav_header {
+    width: none;
+  }
+  .link_container {
+    height: 0;
+  }
+  .nav_link {
+    /* height: 0; */
+    display: none;
+  }
+  .show_navlink {
+    flex-direction: column;
+    display: block;
+    position: absolute;
+    top: 3.8em;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  .show_navlink li {
+    background-color: rgba(255, 255, 255, 0.643);
+  }
+  .show_navlink li:hover {
+    background: rgb(233, 209, 255);
+  }
+  .nav_link li {
+    padding: 10px 30px;
+  }
+  .banner_top {
+    position: relative;
+    top: 40%;
+  }
+}
+
+/* banner */
+.banner {
+  /* position: relative; */
+  /* top: ; */
+  height: 100vh;
+  /* background: #d0cdcd; */
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100vh;
+  background: rgba(73, 166, 233, 0.5);
+  padding: 0 10%;
+  text-align: center;
+}
+.container h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bannerBtn {
+  padding: 6px 14px;
+  background: none;
+  border: 1px solid white;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.bannerBtn:hover {
+  background: white;
+  color: black;
+}
+
+/* about us */
+.about {
+  background: rgba(73, 233, 76, 0.5);
+  height: 100vh;
+}
+.about_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about_container h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+}
+.about_container h1 span {
+  color: aqua;
+}
+
+/* project */
+
+.project {
+  background: rgba(233, 73, 209, 0.5);
+  height: 100vh;
+}
+.project_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project_container h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+}
+
+/* tour */
+
+.tour {
+  background: rgba(233, 214, 73, 0.5);
+  height: 100vh;
+}
+
+.tour_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour_container h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 10px;
+}
+
+/* footer */
+.section {
+  text-align: center;
+  padding: 10px;
+  background: #1f1f2e;
+}
+
+.section p {
+  text-transform: capitalize;
+  color: #fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.top_link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: rgb(180, 233, 73);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: white;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  z-index: -100;
+}
+.show_link {
+  visibility: visible;
+  z-index: 100;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

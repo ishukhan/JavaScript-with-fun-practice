@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #c3c3c3;
+}
+.section_center {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  /* height: 30vh; */
+}
+
+h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: capitalize;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.lorem_form {
+  padding: 0 10px;
+  text-align: center;
+}
+.lorem_form label {
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: capitalize;
+}
+
+.lorem_form input {
+  border-radius: 5px;
+  width: 10%;
+  font-size: 15px;
+  border: none;
+  padding: 2px;
+  outline: none;
+}
+
+.btn {
+  cursor: pointer;
+  font-size: 15px;
+  background: rgb(6, 129, 129);
+  text-transform: capitalize;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.lorem_text {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100%;
+}
+
+.result {
+  padding: 20px;
+  width: 80%;
+  text-align: center;
+}

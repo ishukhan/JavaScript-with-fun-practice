@@ -1,0 +1,306 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #f0f0f0; /* Changed body background color */
+}
+
+/* Center Section with 3D background */
+.section_center {
+  width: 90%; /* Adjusted for responsiveness */
+  margin: 100px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    45deg,
+    #ffffff,
+    #e0e0e0
+  ); /* Using a linear gradient */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile responsiveness for section_center */
+@media (max-width: 768px) {
+  .section_center {
+    width: 95%; /* Adjusted for smaller screens */
+    margin-top: 50px; /* Reduced margin top */
+  }
+}
+
+/* ... (Existing styles remain unchanged) ... */
+
+/* Grocery Form */
+.grocery_form {
+  width: 100%;
+  max-width: 400px; /* Adjusted for responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+/* Alert Styles */
+.alert {
+  letter-spacing: 3px;
+  padding: 2px 20px;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.alert_danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.alert_success {
+  color: #155724;
+  background: #d4edda;
+}
+
+/* Form Controls */
+.form_control {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_control input {
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+  width: 85%;
+  padding: 0 8px;
+  outline: none;
+}
+
+.form_control button {
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  padding: 6px 12px;
+  border: none;
+  background: #00b9ff;
+  color: #fff;
+}
+
+/* Grocery Container */
+.grocery_container {
+  width: 100%;
+  max-width: 400px; /* Adjusted for responsiveness */
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  visibility: hidden;
+}
+
+.show_container {
+  visibility: visible;
+}
+
+.grocery_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.grocery_item {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.grocery_item:hover {
+  color: #155724;
+  background: #d4edda;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+.btn_container {
+  display: flex;
+  gap: 10px;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #f0f0f0; /* Changed body background color */
+}
+
+/* Center Section */
+.section_center {
+  width: 90%; /* Adjusted for responsiveness */
+  margin: 100px auto 0;
+  border-radius: 10px;
+  background: #ffffff; /* Changed section background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Mobile responsiveness for section_center */
+@media (max-width: 768px) {
+  .section_center {
+    width: 95%; /* Adjusted for smaller screens */
+    margin-top: 50px; /* Reduced margin top */
+  }
+}
+
+/* ... (Existing styles remain unchanged) ... */
+
+/* Grocery Form */
+.grocery_form {
+  width: 100%;
+  max-width: 400px; /* Adjusted for responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+/* Alert Styles */
+.alert {
+  letter-spacing: 3px;
+  padding: 2px 20px;
+  font-size: 15px;
+  font-family: "Times New Roman", Times, serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+.alert_danger {
+  color: #721c24;
+  background: #f8d7da;
+}
+
+.alert_success {
+  color: #155724;
+  background: #d4edda;
+}
+
+/* Form Controls */
+.form_control {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form_control input {
+  border-radius: 5px;
+  height: 25px;
+  border: none;
+  width: 85%;
+  padding: 0 8px;
+  outline: none;
+}
+
+.form_control button {
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  padding: 6px 12px;
+  border: none;
+  background: #00b9ff;
+  color: #fff;
+}
+
+/* Grocery Container */
+.grocery_container {
+  width: 100%;
+  max-width: 400px; /* Adjusted for responsiveness */
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  visibility: hidden;
+}
+
+.show_container {
+  visibility: visible;
+}
+
+.grocery_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.grocery_item {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.grocery_item:hover {
+  color: #155724;
+  background: #d4edda;
+}
+
+.title {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+
+.btn_container {
+  display: flex;
+  gap: 10px;
+}
+
+.edit_btn,
+.delete_btn,
+.clear_btn {
+  background: none;
+  font-size: 13px;
+  border: none;
+  color: blue;
+  cursor: pointer;
+  /* Add specific styles if needed */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text To Emoji</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>
+        Text <span><img src="arrow.png" alt="arrow" /></span>Emoji
+      </h1>
+      <div id="endec_btn">
+        <h3 id="enc_btn" class="activeBtn">Encrypt</h3>
+        <h3 id="dec_btn">decrypt</h3>
+      </div>
+      <div id="encryption">
+        <h5>|. type a message</h5>
+        <textarea
+          placeholder="Enter Text"
+          name=""
+          id="textMsg"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <h5>||. set a password</h5>
+        <input
+          type="password"
+          name=""
+          id="password"
+          placeholder="Enter password"
+        />
+        <button id="encrypt_btn">encrypt text</button>
+      </div>
+      <div id="decryption">
+        <h5>|. past encrypt emoji</h5>
+        <textarea
+          placeholder="Enter Emoji"
+          name=""
+          id="emojiMsg"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <h5>||. type a password</h5>
+        <input
+          type="password"
+          name=""
+          id="finalPassword"
+          placeholder="Enter your password"
+        />
+        <button id="decrypt_btn">decrypt emoji</button>
+      </div>
+      <div class="alert"></div>
+      <div id="result"></div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "chaideploy",
+  "version": "1.0.0",
+  "description": "simple chai aur code app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "chai",
+    "aur",
+    "ishu"
+  ],
+  "author": "ishukhan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -20,6 +20,7 @@ const registerUser = asyncHandler(async (req, res) => {
   //return response
 
   const { fullName, email, username, password } = req.body;
+  // console.log("req.Body ",req.body)
   // console.log("email: ",email)
   // this way is throw err all filed check using if else
   // if(fullName === ""){
@@ -35,8 +36,10 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new ApiError(400, "All fields is required :)");
   }
 
+  
+
   // check if username and email already exist
-  const userExist = User.findOne({
+  const userExist = await User.findOne({
     $or: [{ username }, { fullName }],
   });
 
@@ -46,8 +49,14 @@ const registerUser = asyncHandler(async (req, res) => {
 
   // check for image multer. give req. file
   const avatarLocalPath = req.files?.avatar[0]?.path;
-  const coverImageLocalPath = req.files?.coverImage[0]?.path;
-
+  // const coverImageLocalPath = req.files?.coverImage[0]?.path;  //this optional chaining doesnt check  that why use clasic if else
+  // if you do optional chaining without check if they give error 
+  // do  clasic if else check
+  let coverImageLocalPath;
+  if(req.files && Array.isArray(req.files.coverImage) && req.files.coverImage.length >0){
+    coverImageLocalPath= req.files.coverImage[0].path
+  }
+// console.log("req.files ",req.files)
   if (!avatarLocalPath) {
     throw new ApiError(400, "Avatar file is required :)");
   }

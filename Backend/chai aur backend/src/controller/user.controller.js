@@ -22,6 +22,7 @@ const genrateRefereshAndAccessToken = async (userId) => {
     // save refreshToken in db
     await user.save({ validateBeforeSave: false });
     //return both accessToken and refreshToken
+    // console.log("genrateRefereshAndAccessToken", accessToken);
     return { accessToken, refreshToken };
   } catch (error) {
     throw new ApiError(

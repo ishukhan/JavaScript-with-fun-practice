@@ -9,18 +9,20 @@ export const verifyJwt = asyncHandler(async (req, res, next) => {
       req.cookies.accessToken ||
       req.header("Authorization")?.replace("Bearer ", "");
 
-      console.log(token)
+      // console.log("Verify token ", token)
     if (!token) {
       throw new ApiError(401, "Unauthorized request");
     }
 
     // if token available verify using jwt
     const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-
+    console.log("decodedToken ",decodedToken);
+    
     // find the user
     const user = await User.findById(decodedToken?._id).select(
       "-password -refreshToken"
     );
+    console.log("user ",user);
 
     if (!user) {
       //discuss about forntend

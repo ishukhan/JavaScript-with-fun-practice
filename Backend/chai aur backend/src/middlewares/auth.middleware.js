@@ -16,13 +16,13 @@ export const verifyJwt = asyncHandler(async (req, res, next) => {
 
     // if token available verify using jwt
     const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
-    console.log("decodedToken ",decodedToken);
+    // console.log("decodedToken ",decodedToken);
     
     // find the user
     const user = await User.findById(decodedToken?._id).select(
       "-password -refreshToken"
     );
-    console.log("user ",user);
+    // console.log("user ",user);
 
     if (!user) {
       //discuss about forntend
